@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.row {
+  display: flex;
+}
+.add-info {
+  background-color: #2980b9;
+  padding-top: 10px;
+  display: none;
+}
+.add-info-loc {
+  margin-left: 5%;
+}
+.add-info-loc ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.add-info-loc li {
+  max-width: 24%;
+  display: flex;
+  cursor: pointer;
+}
+
+.add-info-loc li i {
+  color: white;
+  padding: 5px;
+}
+.add-info-loc li span {
+  color: white;
+}
+.add-info-soc a {
+  padding: 5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.add-info-soc a:hover {
+  color: #f3c112;
+}
+@media (min-width: 768px) {
+  .add-info {
+    display: flex;
+  }
+}
+.logo-section {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.logo-section img {
+  width: 100%;
+  border-bottom: 1px inset rgb(63, 60, 60);
+}
+@media (min-width: 992px) {
+  .logo-section {
+    height: 120px;
+    width: 100%;
+  }
+  .logo-section img {
+    height: 120px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  background-color: #ffffff;
+  padding: 10px 30px;
+  position: static; /* Allows positioning of children */
+}
+.navbar {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  background-color: #ffffff;
+  padding: 10px;
+  position: relative; /* Allows positioning of children */
+  transition: top 0.3s; /* Smooth transition for fixed position */
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-grow: 1; /* Allow nav links to expand */
+}
+
+.nav-links > li {
+  margin-right: 20px; /* Space between nav items */
+}
+
+.fixed {
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0; /* Aligns to the top */
+  width: 100%; /* Ensures full width */
+  z-index: 1000; /* Keeps it above other content */
+}
+.nav-links a {
+  display: block;
+  padding: 15px 20px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #f3c112;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #2980b9;
+  padding: 0 10px;
+  list-style-type: none;
+  z-index: 1;
+}
+
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f3c112;
+}
+.dropdown li a:hover {
+  color: #f3c112;
+  border-bottom: 1px solid #f3c112;
+  border-top: 1px solid #f3c112;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.search-icon {
+  color: #000000;
+  position: absolute; /* Position relative to the navbar */
+  right: 100px; /* Distance from the right edge */
+}
+
+.fixed {
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0; /* Aligns to the top */
+  width: 100%; /* Ensures full width */
+  z-index: 1000; /* Keeps it above other content */
+}
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Full width */
+    background-color: #ffffff;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .search-icon {
+    color: #000000;
+    margin-left: 20px;
+  }
+}
+.home-section {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 600px; /* Default height */
+  text-align: center; /* Center text */
+  margin: 0 auto;
+  background-image: url(./images/bg-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home-text {
+  background-color: #2980b9;
+  padding: 30px; /* Add some padding */
+  font-size: 1.3rem;
+  top: 40;
+  border-radius: 0 50% 0 45%;
+}
+.home-text span {
+  color: #ffffff;
+}
+.home-text p,
+h1 {
+  color: #f3c112;
+}
+.img img {
+  max-width: 80%; /* Make image responsive */
+  height: 90%; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    height: auto; /* Reduced height for mobile */
+    flex-direction: column; /* Stack elements vertically */
+  }
+  .home-text {
+    margin: 30px 10px;
+    width: 80%;
+  }
+  .img img {
+    max-width: 80%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px;
+  }
+}
+.footer {
+  background-color: #2980b9; /* Light background for contrast */
+  padding: 20px 10%;
+  justify-content: space-around;
+}
+
+.footer-logo img {
+  max-width: 100%; /* Responsive logo */
+  height: auto;
+  border-radius: 15px;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer p,
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Remove default list styles */
+  color: #d1f2eb;
+  padding: 5px;
+}
+.footer p span {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer-link a {
+  text-decoration: none;
+  margin-right: 15px; /* Spacing between social icons */
+  color: #bdc3c7;
+  padding: 5px;
+  font-size: 20px;
+  transform: 0.3s all ease;
+}
+
+.footer-link a:hover {
+  color: #f3c112; /* Change color on hover */
+}
+.contacts li {
+  padding: 5px;
+  cursor: pointer;
+}
+.contacts i {
+  padding: 5px;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .footer-logo {
+    margin-bottom: 20px; /* Space between logo and text */
+  }
+  .ft-tt {
+    display: flex; /* Make the row a flex container */
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space between items */
+    padding: 10px; /* Optional: Add some padding */
+  }
+
+  .ft-logo {
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+    max-width: 25%; /* Limit the max width for larger screens */
+  }
+
+  .ft-text {
+    flex: 1; /* Allow the text to take available space */
+    text-align: left; /* Align text to the left */
+  }
+
+  /* Optional: Responsive adjustments */
+  @media (max-width: 768px) {
+    .ft-logo {
+      max-width: 30%; /* Adjust max width for smaller screens */
+    }
+
+    .ft-text {
+      text-align: center; /* Center text on smaller screens */
+    }
+  }
+  .union,
+  .links,
+  .service,
+  .contacts {
+    margin-bottom: 20px; /* Space between columns */
+  }
+
+  .links,
+  .service,
+  .contacts {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+.links a {
+  text-decoration: none;
+  color: #d1f2eb;
+  transform: 0.3s all ease;
+}
+.links a:hover {
+  color: #f3c112;
+}
+
+@media (max-width: 576px) {
+  .footer-logo {
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center align */
+  }
+
+  .ft-logo,
+  .ft-text {
+    text-align: center; /* Center text */
+  }
+}
